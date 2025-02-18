@@ -1,7 +1,6 @@
 # ============================================================================
 # 1D Battleship
-# Tannaz Chowdhury / 704464
-# K Li / ICS4U
+# Tannaz Chowdhury 
 # Open in system shell > python "2D Battleship.py"
 # 
 # Two players determine how to position a fleet of pirate ships on a
