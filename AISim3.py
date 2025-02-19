@@ -1,4 +1,29 @@
-# Reversegam: a clone of Othello/Reversi
+
+"""
+Reversegam - A Clone of Othello/Reversi  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+Reversegam is a two-player strategy game based on **Othello/Reversi** where players  
+take turns placing tiles ('X' or 'O') on an 8x8 board. The objective is to capture  
+the opponent's pieces by surrounding them horizontally, vertically, or diagonally.  
+The player with the most tiles at the end of the game wins.  
+
+How It Works:  
+1. The board starts with four tiles in the center: two 'X' and two 'O'.  
+2. Players take turns placing their tiles in a valid position.  
+3. A move is valid if it captures at least one of the opponent's tiles.  
+4. Captured tiles flip to the current player's tile.  
+5. If a player has no valid moves, they pass their turn.  
+6. The game ends when neither player can make a move.  
+7. The player with the most tiles at the end wins.  
+
+This program demonstrates **game logic implementation, AI decision-making,  
+and board-based game mechanics** in Python.  
+"""
+
+
 import random
 import sys
 WIDTH = 8  # Board is 8 spaces wide
