@@ -3,6 +3,7 @@
 #should select a phrase to translate – “Hello” (“Bonjour”/“Hola”), “Goodbye” (“Au revoir”/“Adios”),
 #or “Thank You” (“Merci”/“Gracias”) – or to return to the Main Menu.
 # Display main menu and get user input
+
 choice = ""
 while choice != "3":
     print("Select a language:")
