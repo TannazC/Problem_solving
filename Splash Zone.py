@@ -1,13 +1,32 @@
 
-#if enemy is very close to the balloon when it explodes, (s)he is in the
-#inner splash zone and gets wetter than someone who is further from
-#the explosion in the outer splash zone.  The first two arguments specify the x- and y-coordinates of
-#an object. The next two specify the x- and y-coordinates of the
-#explosion. The final two specify the radii of the inner and outer splash
-#zones. Based on the values given, determine whether the object falls
-#inside of the inner splash zone, inside of the outer splash zone, or
-#outside of both splash zones. You may find it useful to use the formula
-#of a circle, centred at (p, q)
+"""
+Splash Zone Detection  
+Author: Tannaz Chowdhury  
+Github User: TannazC
+Date: 2023  
+
+Description:  
+This program determines whether an enemy falls within the **inner** or **outer splash zone**  
+of a water balloon explosion, or if they are outside both zones and remain dry.  
+It calculates the distance between the enemy and the explosion center using  
+the equation of a circle and compares it to the given radii.  
+
+How It Works:  
+1. The user inputs:  
+   - `(x, y)`: Enemy's coordinates.  
+   - `(p, q)`: Explosion center coordinates.  
+   - `radiin`: Radius of the **inner splash zone**.  
+   - `radiout`: Radius of the **outer splash zone**.  
+2. The program calculates the squared distance between the enemy and the explosion center.  
+3. It checks if the enemy is:  
+   - Inside the **inner zone** (closer to the explosion).  
+   - Inside the **outer zone** (farther but still affected).  
+   - Outside both zones (completely safe).  
+
+This program demonstrates coordinate-based distance calculations and conditional logic  
+to classify objects based on their relative position to an explosion.  
+"""
+
 
 def SplashZone(x,y,p,q,radiin,radiout):
 
