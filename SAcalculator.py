@@ -1,3 +1,29 @@
+"""
+Surface Area Calculator  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This program calculates the total surface area of different shapes by allowing the user  
+to add the areas of circles, rectangles, and triangles. The user can keep adding areas  
+until they choose to display the total or quit the program.  
+
+How It Works:  
+1. The user selects an action from a menu:  
+   - Add a circle (requires radius).  
+   - Add a rectangle (requires length and width).  
+   - Add a triangle (requires base and height).  
+   - Display the total surface area.  
+   - Quit the program.  
+2. The program validates user input to ensure only positive values are accepted.  
+3. The total surface area is updated with each shape added.  
+4. The user can check the accumulated surface area at any time.  
+
+This program demonstrates user input validation, function-based calculations,  
+and iterative menu-driven interaction.  
+"""
+
+
 import math
 def area_circle(radius):
     area = math.pi * radius**2
