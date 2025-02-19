@@ -1,3 +1,11 @@
+"""
+This program provides functions for calculating permutations, combinations, and binomial probability distributions.
+
+The permutations(n, r) function computes the number of ways to arrange r elements from a set of n.
+The combinations(n, r) function calculates the number of ways to choose r elements from n, disregarding order.
+The binomial_pd(n, x, p) function computes the binomial probability distribution, determining the probability of x successes in n trials given a success probability p.
+"""
+
 import math
 
 def permutations(n,r):
