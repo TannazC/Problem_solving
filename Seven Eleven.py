@@ -1,9 +1,25 @@
-#Seven/Eleven: A game is played where the player rolls two dice.
-#If the sum of the dice is neither seven nor eleven, the player is awarded a number of points equal to the larger of the two values
-#rolled. The player has up to 10 rolls to accumulate points; however, if the sum is either seven or
-#eleven, the player loses all his/her points. The player can choose to stop at any point, keeping
-#his/her points from previous rounds. Write a program that plays Seven/Eleven. Output the values of
-#the rolls and the current score each round, and the final score (possibly zero) when the game ends.
+"""
+Seven/Eleven Dice Game  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This is a dice-based game where the player rolls two dice to accumulate points.  
+The goal is to roll as many times as possible **without rolling a sum of seven or eleven**,  
+which resets the score to zero. The player can roll up to **10 times** or choose to stop at any point  
+to keep their earned points.  
+
+How It Works:  
+1. The player rolls two six-sided dice.  
+2. If the **sum is seven or eleven**, the player loses all points and the game ends.  
+3. Otherwise, the player earns points equal to the **larger of the two dice values**.  
+4. The game continues for up to **10 rolls** or until the player chooses to stop.  
+5. The final score is displayed at the end of the game.  
+
+This program demonstrates **random number generation, conditional logic,  
+user interaction, and iterative loops** in a fun and interactive way.  
+"""
+
 import random
 points=0
 for roll in range(10):
