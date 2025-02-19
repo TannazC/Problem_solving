@@ -1,5 +1,29 @@
-#Tannaz Chowdhury / J. Garvin / 704464 / ICS3U / 2023-04-06
-#a simple game in which a brave traveller makes their way through a series of tunnels populated by deadly monsters
+"""
+Tunnel Escape Game  
+Author: Tannaz Chowdhury  
+Instructor: J. Garvin  
+Course: ICS3U  
+Date: 2023-04-06  
+
+Description:  
+This is a text-based adventure game where a brave traveler must navigate through  
+a series of tunnels, some of which are inhabited by deadly monsters. The goal is  
+to travel 1000 meters to escape the tunnels while avoiding the monster-filled paths.  
+
+How It Works:  
+1. The player selects the number of tunnels available (between 2 and 4).  
+2. A random tunnel contains a monster, while the others are safe.  
+3. If the player enters a safe tunnel, they move 100 meters forward.  
+4. If the player chooses a tunnel with a monster, they must attempt to escape  
+   by guessing the correct number of steps to sneak past it.  
+5. If the player guesses correctly, they continue their journey.  
+6. If the player fails, they meet a gruesome fate, and the game ends.  
+7. The game continues until the player reaches 1000 meters or encounters death.  
+
+This program demonstrates user input validation, randomness, conditional logic,  
+and interactive storytelling in a turn-based game.  
+"""
+
 
 import random
 Distance=0
