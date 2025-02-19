@@ -1,5 +1,33 @@
-#Tannaz Chowdhury/704464/J. Garvin ICSemiPerimeter3U0/March 22
-#Identifies whether randomly generated side lengths work to form a triangle, and classifies type, area and perimeter.
+
+"""
+Triangle Properties Calculator  
+Author: Tannaz Chowdhury   
+Course: ICS3U0  
+Date: March 22, 2023
+
+Description:  
+This program generates three random side lengths and determines whether they  
+can form a valid triangle based on the Triangle Inequality Theorem. If valid,  
+the program classifies the triangle type, checks for right angles, and calculates  
+the perimeter and area using Heron's Formula.  
+
+How It Works:  
+1. Generates three random side lengths between 1 and 10.  
+2. Checks if the sides satisfy the Triangle Inequality Theorem.  
+3. If valid, classifies the triangle as:  
+   - Equilateral: All sides are equal.  
+   - Isosceles: Two sides are equal.  
+   - Scalene: No sides are equal.  
+4. Determines if the triangle contains a right angle.  
+5. Computes and displays the perimeter.  
+6. Uses Heron's Formula to calculate and display the area (rounded to two decimal places).  
+7. If the sides do not form a triangle, notifies the user.  
+
+This program demonstrates conditional logic, mathematical computations,  
+and the application of geometric principles in programming.  
+"""
+
+
 import random
 import math
 #side length one
