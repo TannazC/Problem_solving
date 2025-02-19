@@ -1,19 +1,30 @@
-# In this game for young children, players move along a trail by drawing cards. Each card
-#contains either one or two coloured symbols, which indicate how many spaces to move. For
-#example, if a player draws a card with a single red symbol on it, s/he moves directly to the next red
-#square on the path. In the case of two symbols, the player moves to the first square of that colour,
-#then proceeds to the next square of the same colour. The game ends when one player reaches the
-#end of the path, which occurs when a player draws a card and there are no more squares of that
-#colour to travel. The game requires no strategy, and is predetermined by the order in which the
-#cards are drawn.
+"""
+CandyLand Game Simulation  
+Author: Tannaz Chowdhury  
+Date: 2023  
 
-#Write a program that simulates two players playing CandyLand. Create a list containing 102
-#elements. The first element is the starting position, and the last element is the end position. The
-#remaining 100 elements should be coloured squares, in the order red, green, blue, yellow. When it is
+Description:  
+This program simulates a two-player game of **CandyLand**, where players move  
+along a **predefined path of colored squares** based on the cards they draw.  
+Each turn, a player draws a card that specifies a **color**, and they move to the  
+next occurrence of that color in the path. The game continues until one player  
+reaches the end of the path and is declared the winner.  
 
-#a player’s turn, generate a random colour and move the player to the next square of that colour. In
-#some cases, that player may move two spaces instead of one. When one player reached the end of
-#the path, announce the winner.
+How It Works:  
+1. The game board consists of **102 spaces**:  
+   - The first space is "start".  
+   - The last space is "end".  
+   - The remaining 100 spaces cycle through **red, green, blue, and yellow**.  
+2. Players take turns **drawing a card** (red, green, blue, or yellow).  
+3. They **move to the next space of that color** in the path.  
+4. The game continues until a player reaches the **end space**, winning the game.  
+5. The program announces the winner and the final distance between the players.  
+
+This program demonstrates **list manipulation, turn-based gameplay, and randomization**  
+to simulate a board game experience in Python.  
+"""
+
+
 import random
 
 
