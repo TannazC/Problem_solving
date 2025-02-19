@@ -1,3 +1,15 @@
+"""
+Quadratic Equation Solver  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This program provides functions for analyzing and manipulating quadratic equations  
+in different forms, including standard, vertex, and factored forms. It allows users  
+to find roots, determine the vertex, and convert between different equation forms.   
+"""
+
+
 #find roots
 def find_roots(a, b, c):
     discriminant = b**2 - 4*a*c
