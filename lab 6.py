@@ -1,21 +1,23 @@
+#Python problem-solving labs
 
-''' warmup 1 '''
-#Consider the following list:
-L = [["CIV", 92],["180", 98],["103", 99],["194", 95]]
-#Write code that prints the element 99 from this list 
 
+"""
+Warmup 1 - element_99(L)
+Iterates through a list of lists.
+Finds and prints the course number associated with the score 99.
+Returns the course number if found.
+"""
 def element_99(L):
     for i in L:
         if i[1] == 99:
             print(i[0])
             return i[0]
     
-#element_99(L)
-
-''' warmup 2 '''
-#Now, write a function get nums(L)) that takes in a list in a format similar to L, and returns a list like
-#[92, 98, 99, 95]. Hint: look are the code for the matrix-vector product from lecture, and understand
-#how the result res was built up
+"""
+Warmup 2 - get_nums(L)
+Extracts all numerical values (scores) from the given list.
+Stores them in a new list and prints the result.
+"""
 
 def get_nums(L):
     new_L = []
@@ -23,12 +25,12 @@ def get_nums(L):
         new_L.append(i[1])
     print(new_L)
 
-#get_nums(L)
-
-''' warmup 3 '''
-#Write a function lookup(L, num) that takes in a list like L and an argument like 99 and returns the
-#corresponding value (like "103"). Return the first value if there are multiple matches. Return None if
-#there are no matches.
+"""
+Warmup 3 - lookup(L, num)
+Searches for a specific score in the list.
+Returns the corresponding course number if found.
+Returns None if the score is not in the list.
+"""
 
 def lookup(L, num):
     for i in L:
@@ -36,9 +38,35 @@ def lookup(L, num):
             print(i[0])
             return i[0]
 
-#lookup(L, 99)
 
 ''' Problem 4 '''
+
+"""
+Problem 4 - Energy Computation - hopfield networks 
+    E(x0, x1, x2, w01, w02, w12)
+    Computes the energy function for a set of binary inputs (-1 or 1).
+    Uses weighted pairwise interactions between x0, x1, and x2.
+    Returns the negative sum of these interactions.
+    print_all_energies(w01, w02, w12)
+    Iterates through all possible (-1,1) combinations of x0, x1, and x2.
+    Computes energy values for each combination.
+    Prints the input values and corresponding energy.
+
+Problem 4 - Weight Adjustment & Iterative Learning
+    adjust_weights(x, y, z)
+        Adjusts the weights (w01, w02, w12) based on input values.
+        Increases the weight by 0.1 if two inputs have the same sign.
+        Decreases the weight by 0.1 if the inputs have opposite signs.
+        Returns the updated weights.
+    repeat_adjust(n)
+        Runs adjust_weights() n times.
+        Prints the adjusted weights after each iteration.
+        Calls print_all_energies() to display the energy transformation process.
+Final Execution in __main__
+    Initializes the weights (w01, w02, w12).
+    Calls print_all_energies() to compute initial energy values.
+    Calls repeat_adjust(4) to adjust weights over 4 iterations and track changes.
+"""
 
 def E(x0, x1, x2, w01, w02, w12):
     term1 = x0 * x1 * w01
@@ -58,13 +86,7 @@ if __name__ == '__main__':
     w02 = -1
     w12 = 1
     print_all_energies(w01, w02, w12)
-   
-    
-#a) posative number will increase overall maginitude of energy
-#which is being subtracted
-    
-#b)
-    
+       
 def adjust_weights(x,y,z):
         x0 = x
         x1 = y
@@ -79,16 +101,12 @@ def adjust_weights(x,y,z):
             w02+=0.1
         else:
             w02-=0.1
-            hannah smells like cheese. Smelly! BOOOO Queens! Bad university! 
         if x1*x2>0:
             w12+=0.1
         else:
             w12-=0.1
         return w01, w02, w12
     
- 
-
-#c) & d) & e)
 def repeat_adjust(n):
     for i in range(0,n):
         print("adjusted ; ")
@@ -96,8 +114,7 @@ def repeat_adjust(n):
         adjust_weights(x,y,z)
         print_all_energies(w01, w02, w12)
         #store it
-        
-        
+              
 if __name__ == '__main__':
     x,y,z = -1,1,1
     repeat_adjust(4)
