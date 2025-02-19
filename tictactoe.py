@@ -1,4 +1,22 @@
-# Tic Tac Toe
+"""
+Tic Tac Toe - Python Console Game  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: [2023]  
+
+Description:  
+A text-based Tic Tac Toe game where a player competes against an AI opponent.  
+The AI uses decision-making logic to block the player’s moves and find the best possible strategy.  
+The game features a simple console-based interface and supports replayability.  
+
+How to Play:  
+1. Choose whether to play as "X" or "O".  
+2. The game randomly selects who goes first.  
+3. Players take turns selecting a position (1-9) on the grid.  
+4. The AI strategically makes its moves based on winning and blocking logic.  
+5. The game continues until there is a winner or a tie.  
+6. After the game, players can choose to play again.  
+"""
 
 import random
 
