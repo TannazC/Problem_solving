@@ -1,3 +1,26 @@
+"""
+Go Fish - Card Game Simulation  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This program simulates a two-player game of **Go Fish**, where players take turns  
+requesting cards from their opponent to form sets of four. The game continues until  
+the deck is empty, and the player with the most completed sets wins.  
+
+How It Works:  
+1. A standard **deck of 52 cards** is created and shuffled.  
+2. Each player is **dealt 8 cards** to start.  
+3. Players take turns asking their opponent for a **specific rank** (e.g., "Q" for Queen).  
+4. If the opponent has the requested card, they must **hand it over**.  
+5. If not, the player **"goes fish"** by drawing a card from the deck.  
+6. If a player collects **four of the same rank**, they complete a stack and set it aside.  
+7. The game continues until all cards are drawn and no more moves can be made.  
+8. The player with the **most completed stacks wins**.  
+
+This program demonstrates **card deck management, turn-based gameplay, input validation,  
+and tracking completed sets**, making it a structured implementation of a classic card game.  
+"""
 
 #CARD GAME FUNCTIONS
 def make_deck(suit,rank):
