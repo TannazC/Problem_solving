@@ -1,10 +1,24 @@
-#In this children’s game, two players alternate naming animals. The first player starts
-#with any animal, such as elephant. The next player must name an animal that begins with the same
-#letter as the one with which the previous animal ended. Thus, the second player could say tiger,
-#then the first could say raccoon, and so on. When a player cannot name an animal, s/he loses. Write
-#a program that lets two players plays the Animal Game. Use a list to store previous guesses, so that
-#they cannot be reused. There should be some mechanism by which a player can indicate that s/he
-#gives up, thus ending the game.
+"""
+Animal Naming Game  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This is a two-player word game where players take turns naming animals. Each new animal  
+must start with the **same letter that the previous animal ended with**. If a player cannot  
+think of an animal, they can enter 'w' to withdraw, and the other player wins.  
+
+How It Works:  
+1. Player 1 enters any animal to start the game.  
+2. Player 2 must enter an animal that starts with the **last letter** of the previous animal.  
+3. Players **cannot reuse animals**, so the program keeps a history of used words.  
+4. If a player cannot name a valid animal, they enter 'w' to withdraw, ending the game.  
+5. The program announces the **winner** based on who remains in the game.  
+
+This game demonstrates **list management, input validation, and turn-based logic**,  
+making it an engaging and interactive word-based challenge.  
+"""
 
 import inval 
 player=1
