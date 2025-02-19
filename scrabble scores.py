@@ -1,9 +1,24 @@
-#Read a string consisting entirely of letters from the user, then determine its “score” using the
-#following rules:
-#• each letter has a value determined by its position in the alphabet (e.g. A=1, Z=26)
-#• each letter’s value is multiplied by the value of its position in the string (e.g. second letter x2)
-#For example, the word “dog” would have a score of 4x1 + 15x2 + 7x3 = 55. Your program should
-#handle both lower- and uppercase input.
+"""
+Letter Scoring Program  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: [2023]  
+
+Description:  
+This program calculates the "score" of a given word based on letter values and their  
+positions in the string. Each letter’s score is determined by:  
+- **Alphabet Position:** A=1, B=2, ..., Z=26  
+- **Positional Multiplier:** Each letter’s value is multiplied by its position in the word  
+
+For example, the word "DOG" has a score calculated as:  
+  (D=4 × 1) + (O=15 × 2) + (G=7 × 3) = **55**  
+
+How to Use:  
+1. Enter a word containing only **letters**.  
+2. The program converts it to uppercase for uniform scoring.  
+3. It computes the total score based on letter positions.  
+4. The final score is displayed.  
+"""
 
 
 word=(input("enter a word: ")).upper()
