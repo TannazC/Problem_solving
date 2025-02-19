@@ -1,14 +1,34 @@
-#Swapping Algorithm ASSIGNMENT
-#Tannaz Chowdhury / ICS4U4 / K.Li
+"""
+Swapping Algorithm  
+Author: Tannaz Chowdhury  
+Course: ICS4U4  
+Date: 2023  
 
-#Write a program to accept 3 numbers/letters/words  from a user  e.g number1, number2, number3
-#then swap their positions. i.e the first number goes into 3rd position , the 3rd number moves
-#to 2nd position and the second number moves into 3rd position. (randomized in each iteration)
+Description:  
+This program accepts a list of **three or more numbers, letters, or words** from the user  
+and swaps their positions randomly. The user can **reshuffle the order** as many times  
+as they like before choosing to exit.  
+
+How It Works:  
+1. The user specifies the **number of items** they want to swap (minimum of 3).  
+2. They enter each item, ensuring no duplicates.  
+3. The program displays the **original order** of the items.  
+4. The items are randomly shuffled and the **new order** is displayed.  
+5. The user can choose to **reshuffle** as many times as they like.  
+6. The program asks if the user wants to **restart with new items** or exit.  
+
+Features:  
+- Ensures input is **not blank** and removes extra spaces.  
+- Prevents users from entering **duplicate items**.  
+- Uses **random shuffling** for fair swaps.  
+- Allows the user to reshuffle repeatedly before exiting.  
+
+This program demonstrates **input validation, list manipulation, and randomization**  
+while allowing users to interactively swap positions of items.  
+"""
 
 import random
 import math
-
-#=================================================================================== FUNCTIONs
 
 #input validation for integers within set parameters, take into account blank input
 def get_integer(low=-math.inf, high=math.inf, prompt="Enter an integer: "):
