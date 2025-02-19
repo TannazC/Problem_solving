@@ -1,8 +1,22 @@
-#2. Treasure Hunt: Create a 12 x 12 grid. On square (0, 0), mark the player. Randomly select three of
-#the remaining 143 squares, and place a “treasure” on them. The player should be able to enter one
-#of four commands (N, S, E or W) to move in a cardinal direction. Ensure that the player remains on
-#the grid at all times. If the player lands on a square containing a treasure, the hunt ends. Display a
-#message showing the total number of steps taken.
+"""
+Treasure Hunt - 12x12 Grid Game  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: [2023]  
+
+Description:  
+A simple text-based treasure hunt game where the player navigates a **12x12 grid**  
+using "N", "S", "E", or "W" commands to find one of three randomly placed treasures.  
+The game prevents movement off the grid and provides hints when near a treasure.  
+
+How to Play:  
+1. The player starts at (0,0) and moves using "N" (North), "S" (South), "E" (East), or "W" (West).  
+2. Movement is restricted within the 12x12 grid.  
+3. If the player reaches a **treasure square**, the game ends.  
+4. If near a treasure, a hint ("The treasure is near...") is displayed.  
+5. The game tracks and displays the total number of moves taken.  
+"""
+
 
 def blank_picture():
     pic = []
@@ -80,7 +94,3 @@ print("you found a treasure!")
 
 pic[r][c]=="X "
         
-
-#3. Treasure Hunt (version 2): Modify your program above so that whenever the player is 2 squares
-#away from a treasure (horizontally, vertically or diagonally), a message is displayed indicating that
-#they are close to a treasure.
