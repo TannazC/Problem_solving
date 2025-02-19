@@ -1,12 +1,26 @@
-#Here is an ancient method for generating prime numbers less than n. Start
-#with a list of numbers from 0 to n-1. Since neither 0 nor 1 are prime, cross them off. 2 is the
-#smallest prime number. Cross off all multiples of 2 in the list that are greater than 2. Find the next
-#value in the list that has not been crossed off. In this case, this is 3. This value is prime. Cross off all
-#multiples of 3 that are greater than 3. Find the next value in the list that has not been crossed off.
-#In this case, this is 5. Cross of multiples of 5 greater than 5, etc. Repeat until it is not possible to
-#find a next uncrossed value. Use the list and range functions to create a list containing the
-#values from 0 to n-1, then perform the steps above to mark all non-prime numbers from the list.
-#Print the remaining prime numbers.
+"""
+Ancient Prime Number Generator (Sieve of Eratosthenes)  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This program generates all prime numbers **less than a given number n** using  
+an ancient method similar to the **Sieve of Eratosthenes**. It systematically eliminates  
+non-prime numbers by marking multiples of each discovered prime.  
+
+How It Works:  
+1. A list of numbers from **0 to n-1** is created.  
+2. The numbers **0 and 1** are **crossed off** as they are not prime.  
+3. The program iterates through the list:  
+   - If a number is not crossed off, it is prime.  
+   - All multiples of that prime greater than itself are marked as non-prime.  
+4. The process repeats until no more unmarked numbers remain.  
+5. The program prints the **remaining prime numbers** in order.  
+
+This program efficiently demonstrates **prime number detection, list operations,  
+and mathematical pattern recognition**.  
+"""
+
 
 import inval
 import math
