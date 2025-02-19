@@ -3,6 +3,7 @@
 #element of X and y is an element of Y. For example, the Cartesian product of the sets X={1, 2} and
 #Y={3, 4} consists of the pairs (1, 3), (1, 4), (2, 3) and (2, 4). Write a program that generates the
 #Cartesian product of two tuples of arbitrary length, formatted as a set of ordered pairs.
+
 cartesian_product = set()
 X=(input("enter X coordinates seperated by '': "))
 xX,yX=X.split()
