@@ -1,3 +1,29 @@
+
+"""
+Sprites and Sounds - Pygame-Based Interactive Game  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: [2023]  
+
+Description:  
+A simple **Pygame-based interactive game** where a player-controlled sprite moves around the  
+screen collecting food items while growing in size. The game includes **real-time movement,  
+collision detection, sound effects, and dynamic food spawning**.
+
+How to Play:  
+1. Control the player using the arrow keys or "WASD":  
+   - Left: "←" or "A"  
+   - Right: "→" or "D"  
+   - Up: "↑" or "W"  
+   - Down: "↓" or "S"  
+2. Collect food to increase the player's size.  
+3. Click anywhere on the screen to **spawn new food items**.  
+4. Press "M" to toggle background music on/off.  
+5. Press "X" to randomly reposition the player.  
+6. Press "ESC" to exit the game.  
+"""
+
+
 import pygame, sys, time, random
 from pygame.locals import *
 
