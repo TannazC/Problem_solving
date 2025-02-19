@@ -1,4 +1,22 @@
-# Sonar Treasure Hunt
+"""
+Sonar Treasure Hunt - Ocean Exploration Game  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: [2023]  
+
+Description:  
+A **treasure-hunting game** where the player uses sonar devices to locate and retrieve  
+sunken treasure chests on a **60x15 ocean grid**. The game provides **distance feedback**  
+for nearby chests, requiring strategic placement of sonar devices.  
+
+How to Play:  
+1. Choose whether to view the game instructions.  
+2. Drop sonar devices by entering **(x, y) coordinates** on a **60x15 grid**.  
+3. Sonar will display the **distance to the nearest chest** or "X" if no treasure is detected.  
+4. Retrieve all **three treasure chests** before running out of sonar devices to win.  
+5. If you run out of sonar devices, the game ends.  
+6. After the game, you can choose to play again.  
+"""
 
 import random
 import sys
