@@ -1,4 +1,28 @@
-# Caesar Cipher
+"""
+Caesar Cipher Encryption and Decryption  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This program implements the **Caesar Cipher**, a simple substitution cipher used for encryption and decryption.  
+It shifts each letter in the message forward or backward by a specified key value.  
+
+How It Works:  
+1. The user chooses whether to **encrypt or decrypt** a message.  
+2. The user enters the **message** to be processed.  
+3. A **key value (1 to 52)** is selected, determining how many positions each letter is shifted.  
+4. The program **encrypts or decrypts** the message based on the key and displays the result.  
+
+Encryption Example (Key = 3):  
+- Plaintext: `HELLO` → Ciphertext: `KHOOR`  
+
+Decryption Example (Key = 3):  
+- Ciphertext: `KHOOR` → Plaintext: `HELLO`  
+
+This program demonstrates **basic cryptography concepts** and the use of **string manipulation, loops, and user input validation**.  
+"""
+
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 MAX_KEY_SIZE = len(SYMBOLS)
 
