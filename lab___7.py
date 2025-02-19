@@ -156,6 +156,37 @@ def forward_step(M) :
 Write a function with the signature backward_step(M) which takes in an arbitrary matrix M and applies
 the backward step of Gaussian Elimination to it. A sample run of the backward step (with automaticallygenerated
 explanations of what’s going on) is illustrated at the end of this handout.'''
+def forward_step(M):
+    n = len(M)  # Number of rows in the matrix
+    
+    for i in range(n):
+        # Get the row to swap with the current row for optimal pivoting
+        row_to_swap = get_row_to_swap(M, i)
+        
+        if row_to_swap != i:  
+            # Swap rows to place the best pivot at the current row
+            print(f"Swapping rows {i} and {row_to_swap} for pivot positioning")
+            M[i], M[row_to_swap] = M[row_to_swap], M[i]
+            print_matrix(M)  # Print the matrix after the swap
+            
+        # Get the leading index for the current row after swapping
+        lead_ind = get_lead_ind(M[i])
+
+        if lead_ind == len(M[i]):  # Skip if row is all zeros
+            continue  
+
+        # Normalize the pivot row so the leading coefficient is 1
+        pivot_value = M[i][lead_ind]
+        M[i] = [x / pivot_value for x in M[i]]
+        print(f"Normalizing row {i} by dividing by pivot {pivot_value}")
+        print_matrix(M)
+
+        # Eliminate rows below
+        eliminate(M, i, lead_ind)
+
+    print("Matrix after forward step:")
+    print_matrix(M)
+
 
 '''Problem 8.
 Now, write a function that solves the equation Mx = b for the vector x. The idea is to first build the
@@ -163,3 +194,22 @@ augmented matrix (M|b), then apply Gaussian Elimination to the augmented matrix,
 x. Test your solve() function. In numpy.py, we provide code to quickly perform matrix multiplication in
 Python so that you can pick arbitrary M and x, obtain a b by multiplying M and x, and then verify that
 your algorithm can recover the x'''
+
+def backward_step(M):
+    n = len(M)  # Number of rows in the matrix
+
+    for i in range(n - 1, -1, -1):  # Iterate from bottom to top
+        lead_ind = get_lead_ind(M[i])  
+
+        if lead_ind == len(M[i]):  # Skip zero rows
+            continue
+
+        # Make all elements above the pivot zero
+        for j in range(i - 1, -1, -1):
+            factor = M[j][lead_ind]
+            M[j] = add_rows_coefs(M[j], 1, M[i], -factor)
+            print(f"Eliminating element in row {j}, column {lead_ind} using row {i}")
+            print_matrix(M)
+
+    print("Matrix after backward step:")
+    print_matrix(M)
