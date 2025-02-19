@@ -1,9 +1,33 @@
-#input val, loops, two players, random, goal
-#two players roll any number of dice. They have to bet on what they WONT roll.
-#If someone rolls something they bet on, they will 'bust' and lose all points, passing the baton to
-#the other player
-#each dice gives you 2 points if you DONT bust
-#the goal is to gain more than 50 points without busting
+"""
+Dice Betting Game - Two Player Challenge  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This is a **two-player dice betting game** where players bet on a number they believe  
+they **won't roll** while rolling multiple dice. The objective is to **reach 50 points**  
+without rolling the number they bet against.  
+
+Game Rules:  
+1. Each player chooses the number of dice they want to roll (between 1 and 9).  
+2. Before rolling, they must bet on a number (1-6) they think they **won't roll**.  
+3. They roll the dice:  
+   - If they roll their bet number, they **BUST** and lose all their points.  
+   - If they avoid their bet number, they **earn 2 points per die rolled**.  
+4. The turn passes to the **next player** after each round.  
+5. The first player to **reach 50 points wins**.  
+
+How to Play:  
+- Players alternate turns, following the betting and rolling process.  
+- The game keeps track of **both players' points** and **displays the current score**.  
+- If a player **busts**, their score resets to **0** and the other player takes over.  
+- The game ends when **one player reaches 50 points**.  
+
+This game integrates **randomization, loops, input validation, and turn-based mechanics**,  
+making it an exciting **strategy and luck-based game**!  
+"""
+
 
 import random
 Player=1
