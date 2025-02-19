@@ -1,16 +1,27 @@
-# Commencement Seating: Create a program that will help organize staff seated on stage during this
-#year’s Commencement ceremony.
+"""
+Commencement Seating Arrangement Program  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
 
-#In the first stage of your program, use a loop to input names of
-#staff into a list, which represents a line of seats.
+Description:  
+This program helps organize and reorder staff seating arrangements for a  
+Commencement ceremony. The user can enter a list of staff members and  
+then interactively rearrange their seating order using specific commands.  
 
-#In the second stage, use a loop to allow the user to
-#reorder the staff until s/he is satisfied with the arrangement.
+How It Works:  
+1. The user enters staff names one by one to create an initial seating order.  
+2. The user can then reorder staff using the following commands:  
+   - "right of X" → Moves a staff member to the right of another.  
+   - "left of X" → Moves a staff member to the left of another.  
+   - "between X Y" → Moves a staff member between two others.  
+3. The program continuously prompts for reordering until the user is satisfied.  
+4. The final seating arrangement is displayed.  
 
-#To keep things user-friendly, your
-#program should ask the user to enter the name of the staff to move, then to use one of three
-#commands to determine their placement: “between X Y”, “right of X”, or “left of X”, where X and Y
-#are existing names in the list. You will need to use to string methods to help parse user input.
+This program integrates user input validation, list manipulation, and interactive seat reordering,  
+providing an efficient way to organize seating for formal events.  
+"""
+
 
 import inval
 
