@@ -1,3 +1,30 @@
+"""
+Bagels - Number Guessing Game  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+Bagels is a logic-based number guessing game where the player must  
+guess a secret three-digit number within ten attempts. After each guess,  
+the program provides hints based on how close the guess is to the secret number.  
+
+How It Works:  
+1. The program generates a random **3-digit number with unique digits**.  
+2. The player inputs a **3-digit guess**.  
+3. The program provides clues:  
+   - "Fermi" means a digit is correct and in the correct position.  
+   - "Pico" means a digit is correct but in the wrong position.  
+   - "Bagels" means no digits are correct.  
+4. The player continues guessing with feedback until they either  
+   - Correctly guess the number.  
+   - Run out of **10 attempts**.  
+5. At the end of a game, the player can choose to **play again or exit**.  
+
+This program demonstrates random number generation, user input validation,  
+looping structures, and logic-based feedback to guide the player.  
+"""
+
+
 import random
 
 NUM_DIGITS = 3
