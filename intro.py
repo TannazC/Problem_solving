@@ -1,3 +1,21 @@
+"""
+This Turtle Graphics program creates a boat sailing on water with the sun in the background. The program makes use of turtle graphics drawing techniques, including shapes, colors, and positioning.
+
+How It Works:
+    Boat Deck – Draws the main hull of the boat using a filled polygon.
+    Boat Mast – Draws the vertical stick in the center of the boat.
+    Boat Sails – Creates two white triangular sails attached to the mast.
+    Boat Windows – Draws three circular windows on the boat.
+    Sun – Draws a yellow circle in the sky and adds sun rays around it.
+    Water – Creates a blue rectangle at the bottom to represent water.
+    Title Text – Displays the game title "Sink The Invaders!" in bold Cooper Black font.
+How to Run:
+    Run the script in any Python environment that supports turtle.
+    The window will open, and the boat with the sun and water will be drawn step by step.
+    The title "Sink The Invaders!" is displayed at the end.
+This program is useful for game intros, graphical projects, or learning basic drawing techniques with Python Turtle. 
+"""
+
 import turtle
 
 t=turtle.Turtle()
