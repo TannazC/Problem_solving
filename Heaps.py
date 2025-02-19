@@ -1,6 +1,24 @@
-# Plays a variant of Nim, with three heaps of any number of objects
-# The first Player to empty a heap loses
-# Heaps can contain a maximum of 70 objects 
+"""
+Three-Heap Nim Variant  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This is a two-player variant of the classic game **Nim**, where players take turns  
+removing objects from **three randomly sized heaps**. The first player to empty  
+a heap **loses** the game.  
+
+How It Works:  
+1. The game starts with **three heaps** containing **random** objects (between 1 and 70).  
+2. Players take turns selecting a heap and choosing how many objects to remove.  
+3. If a player **empties a heap**, they **lose the game** immediately.  
+4. The game continues until one heap reaches **zero objects**.  
+5. The program announces the **losing player** and ends.  
+
+This program demonstrates turn-based decision-making, input validation,  
+and strategic gameplay in a competitive setting.  
+"""
+
 
 import random
 HeapOne = random.randint(1,70)
