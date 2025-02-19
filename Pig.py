@@ -1,7 +1,28 @@
-#Choose a player to go first. That player throws a die and scores as many points as the total shown on the die providing the die
-#doesn’t roll a 1.The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.
-#If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to next player.
-#Play passes from player to player until a winner is determined.
+"""
+Dice Game: Race to 100  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This is a two-player dice game where players take turns rolling two six-sided dice  
+to accumulate points. The goal is to reach exactly 100 points. Players can roll  
+as many times as they like per turn but risk losing all points accumulated that turn  
+if they roll a 1 on either die.  
+
+How It Works:  
+1. Players decide who goes first.  
+2. On their turn, a player can:  
+   - Roll two dice to accumulate points.  
+   - Pass their turn to the other player.  
+3. If a player rolls a **1 on either die**, their turn ends and they lose any points  
+   gained that round.  
+4. Play continues until one player reaches **100 points exactly** and wins the game.  
+
+This program demonstrates turn-based logic, user decision-making, and probability-based  
+risk assessment in an interactive game.  
+"""
+
+
 import random
 points1=0
 points2=0
