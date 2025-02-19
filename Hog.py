@@ -1,8 +1,30 @@
-#This variant is the same as Pig except at the beginning of the game the players decide the maximum number of dice
-#which can be rolled on a turn. (10 is a good number.) Then, on a player's turn, they are free to choose any number
-#of dice to roll up to the maximum allowed. This number may change from turn to turn, and they player is allowed to
-#roll the dice as many times as they like. The player scores points equal to the total values of all the dice rolled,
-#however if any of the dice roll a 1 then the player's score is zero for the turn and their turn ends.
+"""
+Pig Dice Game - Variant with Custom Dice Rolls  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This is a two-player variant of the **Pig dice game** where players choose  
+a maximum number of dice to roll per turn (up to 10). On their turn, players  
+can roll **any number of dice** up to this limit, with the option to roll  
+multiple times per turn. The objective is to **reach 100 points first**  
+without rolling a **1**, which resets their points for the round.  
+
+How It Works:  
+1. Players choose a **maximum number of dice** they can roll per turn.  
+2. On their turn, a player may:  
+   - **Roll dice** (choosing how many within the set limit).  
+   - **Stop rolling** to keep accumulated points.  
+   - **Skip their turn** if they wish.  
+3. If any die rolls a **1**, the player loses all points accumulated that round  
+   and their turn ends immediately.  
+4. Players take turns rolling until one **reaches 100 points** and wins.  
+5. Players can also **stop the game early**, with the highest score determining  
+   the winner.  
+
+This program demonstrates user input validation, looping structures, turn-based  
+decision-making, and probability-based risk assessment in an interactive game.  
+"""
 
 import random
 points1=0
