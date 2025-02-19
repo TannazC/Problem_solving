@@ -1,15 +1,27 @@
 import math
 
-#problem 1
+"""
+Problem 1: Series Sum using a for Loop
+What it does:
+
+Computes a mathematical series sum using 500 iterations.
+Each term alternates in sign and is calculated as ((-1)^i) * (2*i+1) / i.
+The final result is stored in series_sum.
+"""
+
 series_sum = 0
 N= 500
 for i in range(1,N+1):
     term = ((-1)**i)*(2*i+1)/i
     series_sum += term
     
-'print(series_sum)'
+"""
+Problem 2: Series Sum using a while Loop
+What it does:
 
-#problem 2
+Performs the same computation as Problem 1, but using a while loop instead of a for loop.
+Iterates from 1 to 500, computing the sum term by term.
+"""
 
 series_sum = 0
 N= 500
@@ -19,21 +31,17 @@ while i<=N:
     series_sum += term
     i+=1
     
-'print(series_sum)'
 
-#problem 3
-'''The greatest common divisor of n and m is a number d such that n is divisible by d and m is divisible
-by d.
-Note that k is divisible by d if and only if the remainder of the division of k by d is 0, i.e., k % d == 0.
-There is an efficient algorithm for doing finding the greatest common divisor (more on this later),
-but in this question, you should use exhaustive search: trying every possible answer until you find the
-right one. This is a similar approach to the one we used for is perfect square in the Monday lecture
+''' 
+Problem 3: Greatest Common Divisor (GCD) using Brute Force
+Finds the greatest common divisor (GCD) of two numbers using exhaustive search.
+Starts from the larger number and decrements until it finds the largest divisor common to both numbers.
+Returns 0 if there is no valid divisor.
 
 Remainder = Dividend – (Divisor × Quotient)
-// quotient
-% remainder '''
-
-
+// -->quotient
+% -->remainder 
+'''
 
 def gcd(n,m):
     if n>m:
@@ -48,19 +56,14 @@ def gcd(n,m):
         if  n - ((num)*(n//num)) == 0 and m - ((num)*(m//num)) == 0:
             return num     
         
-'print(gcd(500,10))'
 
 
-#problem 4
-'''Write a function with the signature simpify_fraction(n, m) which prints the simplified version of the
-fraction n
-m
-.
-Note that we asked you to print, not return. That is because we don’t yet have a mechanism to return
-more than one number.
-You do not need to use a complicated algorithm to compute the greatest common divisor (although
-you certainly can do that!). For example, simplify_fraction(3,6) should print 1/2, and
-simplify_fraction(8, 4) should print 2.'''
+'''
+Problem 4: Simplifying a Fraction
+Uses gcd(n, m) to compute the greatest common divisor (GCD).
+Divides both the numerator and denominator by the GCD to simplify the fraction.
+If the fraction results in a whole number, it prints the integer value instead of a fraction.
+'''
 
 def simplify_fraction(n, m):
     great = gcd(n,m)
@@ -73,21 +76,15 @@ def simplify_fraction(n, m):
         print( n_new," /", m_new)
         return
     
-'print(simplify_fraction(10,2))'
+"""
+Problem 5: Collecting and Printing a List of Names
+What it does:
 
-#problem 5
+Continuously asks the user for names until "END" is entered.
+Stores names in a list and formats them into a comma-separated string for display.
+Outputs the full list of names at the end.
+"""
 
-'''Write a program that reads repeatedly asks the user for names, and then outputs the list of all the names
-before the special name END is entered. An example of an interaction would be:
-Enter a name: Alice
-Enter a name: Bob
-Enter a name: Charlie
-Enter a name: Dave
-Enter a name: Emily
-Enter a name: END
-The names are: Alice, Bob, Charlie, Dave, Emily
-To store the names in the program, you can use a string. For example, the string might be "" at first,
-then "Alice", then "Alice, Bob", etc. You can use the += operator to add a name to the string.'''
 names = []
 new_name = " " 
 
@@ -105,7 +102,13 @@ for i in names:
     
 print("The names are : ", names_print)
 
-#problem 6
+"""
+Problem 6: Approximating π using the Gregory-Leibniz Series
+What it does:
+
+Uses the Gregory-Leibniz series to approximate the value of π.
+Keeps iterating until the computed value matches math.pi rounded to n decimal places.
+"""
 
 pii = 0
 n= 1
@@ -117,19 +120,23 @@ while round(pii*4,n) != round((math.pi),n):
 
 print(pii*4) 
 
-#problem 7
-'''
- Write a function with the signature next_day(y, m , d) which prints the date that follows the date
-y/m/d.
-Reminder:
-According to the Gregorian calendar, which is the civil calendar in use today, years evenly
-divisible by 4 are leap years, with the exception of centurial years that are not evenly divisible
-by 400. Therefore, the years 1700, 1800, 1900 and 2100 are not leap years, but 1600, 2000, and
-2400 are leap years. (Source: the US Naval Observatory website.)
+"""
+Problem 7: Finding the Next Day in a Date
+Part (a): next_day(y, m, d)
+What it does:
 
-'''
-#part a
+Determines if the given year is a leap year.
+Increments the day, month, or year based on the month’s number of days.
+Handles leap year adjustments for February.
+Outputs the next day's date in a readable format.
 
+Part (b): Counting Days Between Two Dates
+What it does:
+(Incomplete) Intended to iterate through all dates between two given dates, printing each one.
+Uses next_day() to compute the next day in sequence.
+"""
+
+#part a)
 def next_day(y, m , d):
     #check if leap year
     if y%4 == 0:
@@ -187,27 +194,33 @@ def next_day(y, m , d):
     newy = y
     newm = m
     return newd, newy, newm
-    
-#next_day(2024, 2, 28)
 
-'''
-Part (b) Counting Days
+#part b)
+def counting_days(d1, m1, y1, d2, m2, y2):
 
-Write a function that prints out, in order, all the dates between fY/fM/fD and tY/tM/tD. Using the same
-idea, write a function that returns the number of days between two dates '''
-'''
-def counting_days(d1,m1,y1,d2,m2,y2):
-    while d!=d2 and m!=m2 and y!=y2:
-        next_day(y1,m1,d1)
-        
-        
-        
+    # Ensure the first date is earlier than the second
+    if (y1, m1, d1) > (y2, m2, d2):
+        d1, m1, y1, d2, m2, y2 = d2, m2, y2, d1, m1, y1
 
-counting_days(21,3,2006,30,3,2006)
-'''
+    days_count = 0
+    current_d, current_m, current_y = d1, m1, y1
+
+    while (current_y, current_m, current_d) < (y2, m2, d2):
+        print(f"{current_y}/{current_m}/{current_d}")  # Print the current date
+        current_d, current_y, current_m = next_day(current_y, current_m, current_d)
+        days_count += 1
+
+    print(f"{y2}/{m2}/{d2}")  # Print the final date
+    return days_count
 
 
-    
+"""
+Problem 8: Advanced GCD Algorithm
+What it does:
+
+Uses the Euclidean Algorithm to compute the greatest common divisor (GCD).
+Continues swapping and dividing the two numbers until the remainder is 0, at which point it returns the GCD.   
+"""
 def gcd_advanced(n,m):
     if m>n:
         n = m, m = n
