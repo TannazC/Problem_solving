@@ -1,3 +1,24 @@
+"""
+Radical Simplification Tool  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This program provides tools for working with square roots and radical expressions.  
+It includes functions to check if a number is a perfect square, simplify radicals,  
+and display them in proper mathematical notation.  
+
+How It Works:  
+1. **Check if a number is a perfect square**.  
+2. **Simplify a given radical** into the form a√b, where a is the coefficient  
+   and b remains under the square root.  
+3. **Display the simplified radical** in a readable format using Unicode symbols.  
+
+This program demonstrates mathematical logic, modular function design,  
+and formatted output for representing radical expressions.  
+"""
+
+
 import math
 
 #check if a number is square
