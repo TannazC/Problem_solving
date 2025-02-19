@@ -1,5 +1,28 @@
-#Tannaz Chowdhury / J. Garvin
-#Sorceress - checking the moves of a chess piece that moves like both a Rook and a Knight
+"""
+Sorceress Chess Piece Move Validator  
+Author: Tannaz Chowdhury  
+Instructor: J. Garvin  
+Date: 2023  
+
+Description:  
+This program checks the validity of a chess move for a custom piece called the **Sorceress**,  
+which can move like both a **Rook** (horizontally or vertically) and a **Knight**  
+(two squares in one direction and one in the other).  
+
+How It Works:  
+1. The user specifies the **board size** and the Sorceress's **current position**.  
+2. The user inputs the **destination row and column** to check if the move is valid.  
+3. The program verifies if:  
+   - The move stays **within the board's boundaries**.  
+   - The piece has **actually moved** (not remained in the same spot).  
+   - The move follows **Rook movement rules** (straight lines).  
+   - The move follows **Knight movement rules** (L-shaped moves).  
+4. If the move is valid, the program prints **"your move is valid"**; otherwise, it states **"your move is invalid"**.  
+
+This program demonstrates input validation, coordinate-based movement logic,  
+and rule-based decision-making for chess-like games.  
+"""
+
 
 def positive_in(prompt):
     integer = int(input(prompt))
@@ -12,9 +35,6 @@ row= positive_in("Enter current row: ")
 col= positive_in("Enter current column : ")
 dest_row=positive_in("Enter destination row: ")
 dest_col=positive_in("Enter destination column: ")
-
-#-------------------------------------------------- Main program ^^
-
 
 def valid_move(board_size,row,col,dest_row,dest_col):
     
