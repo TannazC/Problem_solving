@@ -1,7 +1,25 @@
-#Some on-line forums censor inappropriate language by using simple replacement
-#algorithms. For instance, the word “damn” might be replaced by the word “dang” to placate the
-#easily-offended. Create a (polite!) list of words to be replaced in a given string, and a second list
-#containing their replacements, then use both lists to replace all inappropriate words in the string.
+"""
+Inappropriate Language Censorship Program  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This program censors inappropriate words in a given sentence by replacing them with  
+polite alternatives. It scans the input text, checks for occurrences of words from a  
+predefined "banned words" list, and replaces them with their corresponding substitutes  
+from a replacement list.  
+
+How It Works:  
+1. The user inputs a sentence.  
+2. The program checks for any inappropriate words in the sentence.  
+3. If a word from the censorship list is found, it is replaced with its polite alternative.  
+4. If the word appears multiple times, the program replaces all occurrences.  
+5. The modified sentence is displayed.  
+
+This program demonstrates string manipulation, list indexing, and text replacement,  
+making it useful for chat filtering, content moderation, and text processing applications.  
+"""
 
 string=input("Enter a sentance: ")
 
