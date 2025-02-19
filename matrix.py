@@ -1,3 +1,13 @@
+"""
+This program performs matrix addition on two 2D lists (matrices) if they have matching dimensions.
+
+It first checks if the number of rows and columns in both matrices are equal.
+If the dimensions match, it creates a new matrix where each element is the sum of corresponding elements from matrices A and B.
+If the matrices do not have the same dimensions, the function returns nothing.
+The sum matrix is both returned and printed.
+This function is useful in linear algebra computations, where matrix operations are needed for data analysis, graphics transformations, and scientific calculations.
+"""
+
 def matrix_sum(A, B):
 
     #if rows and columns match
