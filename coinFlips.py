@@ -1,3 +1,27 @@
+"""
+Coin Flip Simulation  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This program simulates flipping a **coin 1000 times** and tracks how many times it lands on heads.  
+The user is asked to **predict the number of heads** before the simulation begins.  
+
+How It Works:  
+1. The user is prompted to make a guess and press enter to start.  
+2. The program simulates **1000 coin flips**, counting the number of heads.  
+3. Progress updates are displayed at:  
+   - 100 flips  
+   - 500 flips (halfway point)  
+   - 900 flips  
+4. The final count of heads is displayed at the end.  
+5. The user is asked whether their guess was close.  
+
+This program demonstrates basic probability concepts and is useful for understanding randomness and statistics.  
+"""
+
+
 import random
 print('I will flip a coin 1000 times. Guess how many times it will come up heads. (Press enter to begin)')
 input()
