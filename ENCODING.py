@@ -1,6 +1,24 @@
+"""
+Vigenère Cipher Encoder  
+Author: Tannaz Chowdhury  
+Date: 2023  
 
-#ENCODING
+Description:  
+This program encrypts a message using the **Vigenère Cipher**, a method of polyalphabetic  
+substitution encryption. The cipher shifts each letter in the plaintext based on a repeating  
+keyword, making it more secure than simple shift ciphers like **Caesar Cipher**.  
 
+How It Works:  
+1. The user inputs a **plaintext message**, which is converted to **uppercase**.  
+2. The user enters a **keyword** (must be at least 3 letters long).  
+3. The keyword is **repeated** to match the length of the plaintext.  
+4. Each letter in the plaintext is shifted based on the corresponding letter in the key.  
+5. Non-alphabetic characters remain unchanged.  
+6. The encrypted message is displayed.  
+
+This program demonstrates string manipulation, input validation,  
+and classical cryptographic techniques in Python.  
+"""
 
 # Get the plaintext (any characters, converted to uppercase)
 plaintext = input("Plaintext: ").upper()
