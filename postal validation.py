@@ -1,3 +1,11 @@
+"""
+This program validates Canadian postal codes, ensuring they adhere to the A1A 1A1 format, where:
+
+The code consists of exactly six characters (no spaces).
+Letters and numbers alternate (e.g., A1B2C3).
+The first letter cannot be 'W' or 'Z', as these are not used in Canadian postal codes.
+Letters D, F, I, O, Q, and U are not permitted in any letter position.
+"""
 
 def postalcode():
     
