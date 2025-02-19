@@ -1,10 +1,20 @@
-#Tannaz Chowdhury / ICS4U4 / 2023.07.06 / 704464
-#In the country of Rahmania, the cost of mailing a letter is 40 sinas for letters up to 30 grams.
-#Write a program that prompts the user for a mass and then gives the cost of mailing a letter having that mass.
+"""
+Author: Tannaz Chowdhury
+Github User: TannazC
+Date: [2023]
+This program calculates the cost of mailing a letter or package in the country of Rahmania based on its weight in grams. The shipping cost follows a tiered pricing system:
 
-#============================================================================== Input Validation Function
-#Checks if the input fits the 'low' and 'high' criteria specified using the given prompt. Enters a loop if it does not.
-#This function takes into account alphabet input, blank input, and all else that would not be an integer to prevent crashing.
+Up to 30g → 40 sinas
+31g to 50g → 55 sinas
+51g to 100g → 70 sinas
+Over 100g → 70 sinas plus 25 sinas for every additional 50g (or part thereof)
+For example:
+
+A 101g package costs 95 sinas (70 + 25).
+A 149g package also costs 95 sinas, since it falls within the first 50g over 100g.
+A 151g package costs 120 sinas (70 + 25 + 25).
+This program ensures valid input handling, rejecting blank spaces or non-integer values to prevent errors. It allows the user to calculate multiple shipping costs in a single session.
+"""
 
 import math
 from rich import print
