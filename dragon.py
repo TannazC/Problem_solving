@@ -1,3 +1,28 @@
+"""
+Dragon Cave Adventure Game  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+A text-based adventure game where the player chooses between two caves,  
+each containing a dragon. One dragon is friendly and shares treasure, while  
+the other is hungry and eats the player. The outcome is randomized, adding  
+an element of unpredictability to each playthrough.  
+
+How to Play:  
+1. The game introduces the player to the mystery of the two caves.  
+2. The player selects Cave 1 or Cave 2.  
+3. The game randomly determines if the chosen cave contains a friendly dragon  
+   or a deadly dragon.  
+4. The outcome is displayed with suspenseful delays for an immersive experience.  
+5. The player can choose to play again after each round.  
+
+This game is a great beginner project to practice conditional logic, loops,  
+functions, and randomness in Python.  
+"""
+
+
 import random
 import time
 
