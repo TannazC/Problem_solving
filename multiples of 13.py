@@ -1,3 +1,15 @@
+"""
+This program finds the closest multiple of 13 to a given positive integer (n > 0).
+
+It ensures the input is a positive integer using a validation loop.
+It calculates the largest multiple of 13 that is less than or equal to n (SmallMultiple).
+It calculates the next multiple of 13 (LargeMultiple).
+The program determines which of the two is closer to n and prints the result.
+If n is equidistant between two multiples, the smaller multiple is chosen.
+This function is useful in mathematical computations requiring alignment to nearest multiples for rounding or interval-based calculations.
+
+"""
+#PSUEDO CODE
 #GET/INPUT posative integer n>0
 #(validation loop)
 #SET SmallMultiple to 13*(n//13)
