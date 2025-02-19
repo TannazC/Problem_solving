@@ -1,9 +1,33 @@
-# One method of creating a character in D&D involves rolling
-# four six-sided dice and taking the three largest values.
-# These values are added together to form one of six attributes:
-# strength, constitution, dexterity, wisdom, intelligence and
-# charisma. Write a program that randomly generates a character's
-# stats, so they can be used to play a game.
+"""
+Dungeons & Dragons Character Stats Generator  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This program generates **randomized character attributes** for a Dungeons & Dragons game.  
+It follows the standard method of rolling **four six-sided dice (d6)** and summing the  
+three highest values to determine the six core attributes:  
+
+- Strength  
+- Constitution  
+- Dexterity  
+- Wisdom  
+- Intelligence  
+- Charisma  
+
+Each attribute is independently generated, ensuring a fair distribution of stats.  
+
+How to Play:  
+1. The program rolls four six-sided dice for each attribute.  
+2. It removes the lowest die roll and sums the remaining three.  
+3. The attributes are assigned to two players for character creation.  
+4. The generated stats are displayed in a structured format.  
+
+This program provides a quick and reliable way to generate **balanced character stats**  
+for a new D&D adventure.  
+"""
+
 import random
 
 def roll_dice():
