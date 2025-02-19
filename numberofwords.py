@@ -1,4 +1,13 @@
+"""
+This program counts the number of words in a given string, ensuring that each word contains at least three or more characters.
 
+The get_string(case, prompt) function collects a validated string input, ensuring it contains only letters and has at least three characters.
+The wordcount() function converts the string to lowercase and calculates the number of words based on spaces (" ") between them.
+This function is useful for basic text processing tasks, such as analyzing word counts in user input or validating formatted string entries.
+
+*this can be imported as a function in larger programs*
+
+"""
 
 def get_string(case,prompt):
     choice = input(prompt)
@@ -17,4 +26,3 @@ def wordcount():
     Words= (string.count(" "))+1
     return Words
     
-#Count the number of “words” in a given string that contain three or more characters.
