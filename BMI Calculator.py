@@ -1,8 +1,32 @@
-#Tannaz Chowdhury / ICS4U4 / K. Li / 2023
-#BMI Calculator and classifier in Python (ver.3)
+"""
+BMI Calculator and Classifier  
+Author: Tannaz Chowdhury  
+Course: ICS4U4  
+Instructor: K. Li  
+Date: 2023  
 
-#The imperial BMI formula = Weight (LBS) x 703 ÷ Height (Inches²)
-#The metric BMI formula = Weight (KG) ÷ Height (Metres²)
+Description:  
+This program calculates **Body Mass Index (BMI)** using both **Imperial**  
+and **Metric** measurement systems. It also classifies BMI into standard  
+weight categories based on medical guidelines.  
+
+How It Works:  
+1. The user selects a measurement system:  
+   - **Imperial** (LBS & Inches) → Formula: (Weight × 703) ÷ (Height²).  
+   - **Metric** (KG & Meters) → Formula: Weight ÷ (Height²).  
+2. The program validates user input to ensure only **positive values** are accepted.  
+3. The BMI is **calculated and rounded to one decimal place**.  
+4. The BMI is classified into one of the following categories:  
+   - Underweight (≤18.5)  
+   - Normal Weight (18.6 – 24.9)  
+   - Overweight (25 – 29.9)  
+   - Obese (Class 1: 30 – 34.9, Class 2: 35 – 39.9, Class 3: 40+)  
+5. The program outputs the **BMI value and classification**.  
+
+This program demonstrates **user input validation, numerical calculations,  
+conditional logic, and formatted output** for health-related computations.  
+"""
+
 
 import math
 from rich import print
