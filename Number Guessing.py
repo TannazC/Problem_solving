@@ -1,3 +1,27 @@
+"""
+Three-Digit Number Matching Game  
+Author: Tannaz Chowdhury  
+Date: 2023  
+
+Description:  
+This game challenges the player to guess a **random three-digit number**.  
+The player earns points for each matching digit in the **same position**  
+as the randomly generated number.  
+
+How It Works:  
+1. The program generates a **random three-digit number** (100-999).  
+2. The player inputs their own **three-digit guess**.  
+3. The program compares the **first, middle, and last digits** of both numbers.  
+4. The player earns **one point per matching digit** in the correct position.  
+5. The program displays which digits match and the total score.  
+6. If the player enters an invalid number (not in the 100-999 range),  
+   they are prompted to try again.  
+
+This program demonstrates input validation, number manipulation using  
+integer division and modulus, and conditional logic for scoring.  
+"""
+
+
 import random
 target = random.randint(100, 999)
 print("I'm thinking of a three-digit number.")
