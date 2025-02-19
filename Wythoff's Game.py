@@ -1,7 +1,28 @@
-#Wythoff's Game:
-#Plays a variant of Nim, with one heap of 21 objects.
-# The player to remove the last object loses.
-#if any heap runs empty, the player who takes it out loses
+"""
+Wythoff's Game - A Variant of Nim  
+Author: Tannaz Chowdhury  
+GitHub: TannazC  
+Date: 2023  
+
+Description:  
+This is a two-player game based on **Wythoff's Game**, a variant of the classic **Nim** game.  
+The game starts with **two heaps** containing a random number of objects. Players take turns  
+removing objects from one heap or both. The player who **removes the last object and empties  
+a heap loses** the game.  
+
+How It Works:  
+1. Two heaps are initialized with **random** numbers of objects between **1 and 42**.  
+2. Players **take turns removing objects** from one or both heaps.  
+3. Players can choose to:  
+   - Remove any number of objects from **Heap 1**.  
+   - Remove any number of objects from **Heap 2**.  
+   - Remove the **same number** of objects from both heaps.  
+4. If a player **empties a heap**, they **lose the game** and the other player wins.  
+
+This program demonstrates **turn-based game logic, random number generation,  
+and strategic decision-making**, making it an engaging introduction to game theory concepts.  
+"""
+
 
 import random
 print("You can either remove any number of objects from one heap, or any number from both. If ANY heap runs empty, the player who emptied it loses!")
